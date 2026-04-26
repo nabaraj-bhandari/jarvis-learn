@@ -1,6 +1,8 @@
-def main():
-    print("Hello from jarvis!")
+file = open("test.txt", "w")
 
-
-if __name__ == "__main__":
-    main()
+try:
+    file.write("Writing updated")
+except Exception as e:
+    print(f"Error writing file: {e}")
+finally:
+    file.close()
